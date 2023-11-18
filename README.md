@@ -1,12 +1,46 @@
 
-**Base composer**
+**Installation**
 
-Package composer.json:
+https repo url:
+> https://github.com/joussin/package-template.git
+
+
+ssh repo url:
+> git@github.com:joussin/package-template.git
+
+
+PRIVATE https repo url with credentials:
+> https://sjoussin:ATBBDf5TXDmL2qBJprdZfRGr3sff9ADE8732@github.com/joussin/package-template.git
+
+
 
 ````json
 {
-  "name": "packages/package-template",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/joussin/package-template.git"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.0",
+    "joussin/package-template": "dev-develop"
+  }
+}
+````
+
+
+
+**Package composer.json**
+
+Basic Package composer.json:
+
+````json
+{
+  "name": "joussin/package-template",
   "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/joussin/package-template",
   "description": "Development package template",
   "keywords": ["package"],
   "authors": [
@@ -16,8 +50,6 @@ Package composer.json:
       "role": "Developer"
     }
   ],
-  "homepage": "https://github.com/joussin",
-  "license": "MIT",
   
   "require": {
     "php": ">=7.2.0"
