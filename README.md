@@ -1,5 +1,8 @@
 
-**Installation**
+# Installation via Composer:
+
+
+### Public repository:
 
 https repo url:
 > https://github.com/joussin/package-template.git
@@ -7,11 +10,6 @@ https repo url:
 
 ssh repo url:
 > git@github.com:joussin/package-template.git
-
-
-PRIVATE https repo url with credentials:
-> https://sjoussin:ATBBDf5TXDmL2qBJprdZfRGr3sff9ADE8732@github.com/joussin/package-template.git
-
 
 
 ````json
@@ -31,9 +29,20 @@ PRIVATE https repo url with credentials:
 
 
 
-**Package composer.json**
+### Private repository:
 
-Basic Package composer.json:
+PRIVATE https repo url with credentials:
+
+> https://sjoussin:ATBBDf5TXDmL2qBJprdZfRGr3sff9ADE8732@github.com/joussin/package-template.git
+
+
+
+--- 
+
+
+# Configuration via Composer
+
+### Basic Package composer.json:
 
 ````json
 {
@@ -84,9 +93,7 @@ Basic Package composer.json:
 }
 ````
 
----
-
-**Psr Implementation**
+### Psr Implementation
 
 For a Psr Implementation, add :
 
@@ -101,19 +108,13 @@ For a Psr Implementation, add :
     "psr/container-implementation": "1.1|2.0"
   }
 }
-
 ````
 
-
-
----
-
-
-**Script - Tests - Code Clean**
+### Script - Tests - Code Clean - Custom script
 
 TODO: voir en détail
 
-For code test & code clean, add :
+For code test & code clean or any script, add :
 
 ````json
 {
@@ -135,21 +136,14 @@ For code test & code clean, add :
       "@psalm",
       "@phpunit"
     ]
-
   }
 }
-
 ````
 
-
-For a bin/script Implementation, add :
-
+For a Custom bin/script, add :
 
 ````json
-
 {
-
-  
   "bin": [
     "bin/script"
   ],

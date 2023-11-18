@@ -1,5 +1,5 @@
 {
-    "name": "joussin/package-template",
+    "name": "joussin-pkg/package-template",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/joussin/package-template",
