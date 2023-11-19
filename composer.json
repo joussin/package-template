@@ -1,6 +1,8 @@
 {
     "name": "joussin/package-template",
     "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/joussin/package-template",
     "description": "Development package template",
     "keywords": ["package"],
     "authors": [
@@ -10,8 +12,6 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/joussin",
-    "license": "MIT",
 
     "require": {
         "php": ">=7.2.0"
@@ -23,7 +23,7 @@
 
     "autoload": {
         "psr-4": {
-            "Joussin\\Package\\": "src/"
+            "Joussin\\PackageTemplate\\": "src/"
         },
         "files": [
             "src/helpers/functions.php"

@@ -1,12 +1,40 @@
 
-**Base composer**
+# Github:
 
-Package composer.json:
+https://github.com/joussin/package-template
+
+
+# Installation via Composer:
 
 ````json
 {
-  "name": "packages/package-template",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/joussin/package-template.git"
+    }
+  ],
+  "require": {
+    "joussin/package-template": "dev-develop"
+  }
+}
+````
+
+
+
+--- 
+
+
+# Configuration via Composer
+
+### Basic Package composer.json:
+
+````json
+{
+  "name": "joussin/package-template",
   "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/joussin/package-template",
   "description": "Development package template",
   "keywords": ["package"],
   "authors": [
@@ -16,8 +44,6 @@ Package composer.json:
       "role": "Developer"
     }
   ],
-  "homepage": "https://github.com/joussin",
-  "license": "MIT",
   
   "require": {
     "php": ">=7.2.0"
@@ -52,9 +78,7 @@ Package composer.json:
 }
 ````
 
----
-
-**Psr Implementation**
+### Psr Implementation
 
 For a Psr Implementation, add :
 
@@ -69,19 +93,13 @@ For a Psr Implementation, add :
     "psr/container-implementation": "1.1|2.0"
   }
 }
-
 ````
 
-
-
----
-
-
-**Script - Tests - Code Clean**
+### Script - Tests - Code Clean - Custom script
 
 TODO: voir en détail
 
-For code test & code clean, add :
+For code test & code clean or any script, add :
 
 ````json
 {
@@ -103,21 +121,14 @@ For code test & code clean, add :
       "@psalm",
       "@phpunit"
     ]
-
   }
 }
-
 ````
 
-
-For a bin/script Implementation, add :
-
+For a Custom bin/script, add :
 
 ````json
-
 {
-
-  
   "bin": [
     "bin/script"
   ],
@@ -131,4 +142,3 @@ For a bin/script Implementation, add :
 }
 
 ````
-
