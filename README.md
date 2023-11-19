@@ -12,6 +12,24 @@ ssh repo url:
 > git@github.com:joussin/package-template.git
 
 
+### Private repository:
+
+PRIVATE https repo url with credentials:
+
+> https://sjoussin:ATBBDf5TXDmL2qBJprdZfRGr3sff9ADE8732@github.com/joussin/package-template.git
+
+
+
+
+
+### Liaison des packages:
+
+https://getcomposer.org/doc/04-schema.md#package-links
+https://getcomposer.org/doc/05-repositories.md
+
+
+type `vcs` ou `git`:
+
 ````json
 {
   "repositories": [
@@ -27,14 +45,39 @@ ssh repo url:
 }
 ````
 
+type `composer`:
 
+````json
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.example.com"
+    }
+  ]
+}
+````
 
-### Private repository:
+http://packages.example.com = http://packages.example.com/packages.json
 
-PRIVATE https repo url with credentials:
-
-> https://sjoussin:ATBBDf5TXDmL2qBJprdZfRGr3sff9ADE8732@github.com/joussin/package-template.git
-
+packages.json:
+````json
+{
+  "packages": {
+    "joussin/package-template": {
+      "dev-develop": {
+        "name": "joussin/package-template",
+        "version": "dev-develop",
+        "source": {
+          "url": "https://github.com/joussin/package-template.git",
+          "type": "git"
+        }
+      },
+      "0.0.1": {}
+    }
+  }
+}
+````
 
 
 --- 
@@ -157,4 +200,3 @@ For a Custom bin/script, add :
 }
 
 ````
-
