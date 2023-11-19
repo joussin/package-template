@@ -23,7 +23,7 @@
 
     "autoload": {
         "psr-4": {
-            "Joussin\\Package\\": "src/"
+            "Joussin\\PackageTemplate\\": "src/"
         },
         "files": [
             "src/helpers/functions.php"
