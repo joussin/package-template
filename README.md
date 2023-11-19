@@ -58,7 +58,10 @@ type `composer`:
 }
 ````
 
+
 http://packages.example.com = http://packages.example.com/packages.json
+
+ex: https://raw.githubusercontent.com/joussin/package-template/develop/packages.json
 
 packages.json:
 ````json
@@ -78,6 +81,25 @@ packages.json:
   }
 }
 ````
+
+
+
+packages list by url:
+
+https://repo.packagist.org/p2/monolog/monolog.json:
+````json
+{
+  "metadata-url": "/p2/%package%.json"
+}
+````
+https://raw.githubusercontent.com/joussin/package-template/develop/p2/joussin/package-template.json
+````json
+{
+  "metadata-url": "https://raw.githubusercontent.com/joussin/package-template/develop/p2/%package%.json"
+}
+````
+
+
 
 
 --- 
