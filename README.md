@@ -1,4 +1,9 @@
 
+# Github:
+
+https://github.com/joussin/package-template
+
+
 # Installation via Composer:
 
 ````json
