@@ -34,7 +34,7 @@ type `vcs` ou `git`:
 {
   "repositories": [
     {
-      "type": "vcs",
+      "type": "git",
       "url": "https://github.com/joussin/package-template.git"
     }
   ],
@@ -61,8 +61,6 @@ type `composer`:
 
 http://packages.example.com = http://packages.example.com/packages.json
 
-ex: https://raw.githubusercontent.com/joussin/package-template/develop/packages.json
-
 packages.json:
 ````json
 {
@@ -73,12 +71,28 @@ packages.json:
         "version": "dev-develop",
         "source": {
           "url": "https://github.com/joussin/package-template.git",
-          "type": "git"
+          "type": "git",
+          "reference" : "dev-develop"
         }
       },
       "0.0.1": {}
     }
   }
+}
+````
+
+
+ex: https://raw.githubusercontent.com/joussin/package-template/develop/packages.json
+
+
+````json
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://raw.githubusercontent.com/joussin/package-template/develop/"
+    }
+  ]
 }
 ````
 

@@ -6,7 +6,8 @@
         "version": "dev-develop",
         "source": {
           "url": "https://github.com/joussin/package-template.git",
-          "type": "git"
+          "type": "git",
+          "reference" : "dev-develop"
         }
       }
     }
