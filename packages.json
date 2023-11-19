@@ -7,7 +7,7 @@
         "source": {
           "url": "https://github.com/joussin/package-template.git",
           "type": "git",
-          "reference" : "8d1dcb71ffa766ee024c1cc0925da45961c903b5"
+          "reference" : "develop"
         }
       }
     }

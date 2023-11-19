@@ -16,7 +16,7 @@ ssh repo url:
 
 PRIVATE https repo url with credentials:
 
-> https://sjoussin:ATBBDf5TXDmL2qBJprdZfRGr3sff9ADE8732@github.com/joussin/package-template.git
+> https://{username}:{password}@github.com/joussin/package-template.git
 
 
 
@@ -39,13 +39,14 @@ type `vcs` ou `git`:
     }
   ],
   "require": {
-    "php": ">=7.2.0",
     "joussin/package-template": "dev-develop"
   }
 }
 ````
 
 type `composer`:
+
+http://packages.example.com = http://packages.example.com/packages.json
 
 ````json
 {
@@ -54,33 +55,14 @@ type `composer`:
       "type": "composer",
       "url": "http://packages.example.com"
     }
-  ]
-}
-````
-
-
-http://packages.example.com = http://packages.example.com/packages.json
-
-packages.json:
-````json
-{
-  "packages": {
-    "joussin/package-template": {
-      "dev-develop": {
-        "name": "joussin/package-template",
-        "version": "dev-develop",
-        "source": {
-          "url": "https://github.com/joussin/package-template.git",
-          "type": "git",
-          "reference" : "dev-develop"
-        }
-      },
-      "0.0.1": {}
-    }
+  ],
+  "require": {
+    "joussin/package-template": "dev-develop"
   }
 }
 ````
 
+Dans notre cas:
 
 ex: https://raw.githubusercontent.com/joussin/package-template/develop/packages.json
 
@@ -92,9 +74,36 @@ ex: https://raw.githubusercontent.com/joussin/package-template/develop/packages.
       "type": "composer",
       "url": "https://raw.githubusercontent.com/joussin/package-template/develop/"
     }
-  ]
+  ],
+  "require": {
+    "joussin/package-template": "dev-develop"
+  }
 }
 ````
+
+packages.json:
+
+````json
+{
+  "packages": {
+    "joussin/package-template": {
+      "dev-develop": {
+        "name": "joussin/package-template",
+        "version": "dev-develop",
+        "source": {
+          "url": "https://github.com/joussin/package-template.git",
+          "type": "git",
+          "reference" : "8d1dcb71ffa766ee024c1cc0925da45961c903b5"
+        }
+      },
+      "0.0.1": {}
+    }
+  }
+}
+````
+
+
+
 
 
 
